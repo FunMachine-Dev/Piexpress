@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIExpress</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Foldit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Staatliches&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One&family=Foldit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Staatliches&family=Varela+Round&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header_contenedor" id="header">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-like" width="32"
+                height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f31c95" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 16m0 1a1 1 0 0 1 1 -1h1a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1z" />
+                <path
+                    d="M6 20a1 1 0 0 0 1 1h3.756a1 1 0 0 0 .958 -.713l1.2 -3c.09 -.303 .133 -.63 -.056 -.884c-.188 -.254 -.542 -.403 -.858 -.403h-2v-2.467a1.1 1.1 0 0 0 -2.015 -.61l-1.985 3.077v4z" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M5 12.1v-7.1a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-2.3" />
+            </svg>
+        </a>
+        <h1 class="titulo">PIExpress</h1>
+
+        <div class="menu">
+            <nav>
+                <a href="#autor">Sobre el autor</a>
+                <a href="#confidencialidad">Privacidad de la información</a>
+            </nav>
+        </div>
+    </div>
+    <h2>¡Bienvenidos colegas!</h2>
+    <section class="bienvenida">
+        <div class="bienvenida__txt">
+            <p>¿Te ha pasado que al hacer tus formularios PIE
+                tienes que repetir muchas veces los mismos datos? ¡Eso se acabó! Con esta herramienta,
+                podrás agilizar ese tedioso proceso, ya que bastará con escribir una sola vez
+                los datos del establecimiento, del equipo PIE y de tus estudiantes y éstos se insertarán
+                automáticamente en todas las secciones de cada uno de los formularios que necesites.
+                Así, podrás descargar tus formularios con todos los datos básicos insertos, listos para
+                completar.
+                <br>
+                <br>
+                Revisa las instrucciones a continuación para descubrir cómo funciona:
+            </p>
+            <img class="img_bienvenida" src="fondo_documentos.jpg" alt="fondo documentos">
+        </div>
+    </section>
+
+    <div class="instrucciones">
+        <h3>Instrucciones</h3>
+        <p>1. Completa los datos de tu establecimiento y del equipo PIE.
+            <br>
+            2. Completa los datos de un estudiante.
+            <br>
+            3. Descarga el o los formularios que necesites para ese estudiante haciendo click en el botón
+            correspondiente.
+            <br>
+            4. Puedes borrar los datos del estudiante para ingresar uno nuevo y descargar otro formulario.
+        </p>
+    </div>
+    <div class="posdata">Si te preocupa el manejo o uso de la información que ingresarás en esta aplicación
+        te invito a visitar la sección <a href="#confidencialidad">"Privacidad de la información".</a>
+    </div>
+
+    <main class="formulario">
+        <!--Formulario colegio-->
+        <fieldset>
+            <legend>DATOS ESTABLECIMIENTO Y EQUIPO</legend>
+            <section id="formularios">
+                <div class="form-colegio">
+                    <div class="campo">
+                        <label>Nombre del establecimiento:</label>
+                        <input class="input" type="text" id="establecimiento" name="establecimiento">
+                    </div>
+                    <div class="campo">
+                        <label>Nombre director/a:</label>
+                        <input class="input" type="text" id="nom_direc" name="nom_direc">
+                    </div>
+                    <div class="campo">
+                        <label>RBD:</label>
+                        <input class="input" type="text" id="rbd" name="rbd">
+                    </div>
+                </div>
+                <hr>
+                <!--Formulario responsable-->
+                <p class="subtitulo-form">PROFESIONAL RESPONSABLE DEL PROCESO DE EVALUACIÓN INTEGRAL DEL ESTUDIANTE</p>
+            </section>
+            <section>
+                <div class="form-PIE1">
+                    <div class="campo">
+                        <label>Nombre del profesional:</label>
+                        <input class="input" type="text" id="nom_prof_resp" name="nom_prof_resp">
+                    </div>
+                    <div class="campo">
+                        <label>RUN:</label>
+                        <input class="input" type="text" id="run_prof_resp" name="run_prof_resp">
+                    </div>
+                    <div class="campo">
+                        <label>Profesión/especialidad:</label>
+                        <input class="input" type="text" id="prof_prof_resp" name="prof_prof_resp">
+                    </div>
+                    <div class="campo">
+                        <label>Cargo:</label>
+                        <input class="input" type="text" id="cargo_prof_resp" name="cargo_prof_resp">
+                    </div>
+                    <div class="campo">
+                        <label>Fono contacto:</label>
+                        <input class="input" type="text" id="fono_prof_resp" name="fono_prof_resp">
+                    </div>
+                    <div class="campo">
+                        <label>E-mail:</label>
+                        <input class="input" type="email" id="mail_prof_resp" name="mail_prof_resp">
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <!--Formulario equipo PIE-->
+            <p class="subtitulo-form">PROFESIONALES QUE HAN PARTICIPADO EN EL PROCESO DE ENTREGA DE APOYOS</p>
+            <section>
+                <div class="form-PIE2">
+                    <div class="campo">
+                        <label>Nombre:</label>
+                        <input class="input" type="text" id="nom_prof_pie1" name="nom_prof_pie1">
+                    </div>
+                    <div class="campo">
+                        <label>Profesión:</label>
+                        <input class="input" type="text" id="prof_prof_pie1" name="prof_prof_pie1">
+                    </div>
+                    <div class="campo">
+                        <label>Fono/E-mail:</label>
+                        <input class="input" type="text" id="contacto_prof_pie1" name="contacto_prof_pie1">
+                    </div>
+                    <div class="campo">
+                        <label>Registro profesional:</label>
+                        <input class="input" type="text" id="reg_prof_pie1" name="reg_prof_pie1">
+                    </div>
+                    <!--profesional 2-->
+                    <div class="campo">
+                        <input class="input" type="text" id="nom_prof_pie2" name="nom_prof_pie2">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="prof_prof_pie2" name="prof_prof_pie2">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="contacto_prof_pie2" name="contacto_prof_pie2">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="reg_prof_pie2" name="reg_prof_pie2">
+                    </div>
+                    <!--profesional 3-->
+                    <div class="campo">
+                        <input class="input" type="text" id="nom_prof_pie3" name="nom_prof_pie3">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="prof_prof_pie3" name="prof_prof_pie3">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="contacto_prof_pie3" name="contacto_prof_pie3">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="reg_prof_pie3" name="reg_prof_pie3">
+                    </div>
+                    <!--profesional 4-->
+                    <div class="campo">
+                        <input class="input" type="text" id="nom_prof_pie4" name="nom_prof_pie4">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="prof_prof_pie4" name="prof_prof_pie4">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="contacto_prof_pie4" name="contacto_prof_pie4">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="reg_prof_pie4" name="reg_prof_pie4">
+                    </div>
+                    <!--profesional 5-->
+                    <div class="campo">
+                        <input class="input" type="text" id="nom_prof_pie5" name="nom_prof_pie5">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="prof_prof_pie5" name="prof_prof_pie5">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="contacto_prof_pie5" name="contacto_prof_pie5">
+                    </div>
+                    <div class="campo">
+                        <input class="input" type="text" id="reg_prof_pie5" name="reg_prof_pie5">
+                    </div>
+                </div>
+            </section>
+        </fieldset>
+        <hr>
+        <!--Formulario estudiante-->
+        <fieldset>
+            <legend>DATOS ESTUDIANTES</legend>
+            <form>
+                <div class="form-estudiante">
+                    <div class="campo">
+                        <label>Nombre del estudiante:</label>
+                        <input class="input" type="text" name="nombre_est" id="nombre_est">
+                    </div>
+                    <div class="campo">
+                        <label>Curso/nivel educativo:</label>
+                        <input class="input" type="text" name="curso_est" id="curso_est">
+                    </div>
+                    <div class="campo">
+                        <label>RUN:</label>
+                        <input class="input" type="text" name="run_est" id="run_est">
+                    </div>
+
+                    <div class="campo">
+                        <label>Fecha de nacimiento:</label>
+                        <input class="input" type="date" name="fecha_nac" id="fecha_nac">
+                    </div>
+                    <div class="campo">
+                        <label>Edad actual:</label>
+                        <input class="input" type="text" id="edad_est" name="edad_est" readonly>
+                    </div>
+                    <div class="campo">
+                        <label>*Nacionalidad:</label>
+                        <input class="input" type="text" id="nacio_est" name="nacio_est">
+                    </div>
+                    <div class="campo">
+                        <label>*Lengua de origen:</label>
+                        <input class="input" type="text" id="lge_orig_est" name="lge_orig_est">
+                    </div>
+                    <div class="campo">
+                        <label>*Lengua uso habitual:</label>
+                        <input class="input" type="text" id="lge_uso_est" name="lge_uso_est">
+                    </div>
+
+                </div>
+                <p class="txt-fu-salud"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M12 9h.01" />
+                        <path d="M11 12h1v4h1" />
+                    </svg> *Solo para FU Valoración de salud</p>
+                <div>
+                    <input class="boton" type="button" id="borrar" value="Borrar datos"
+                        title="Borra los datos del estudiante para insertar uno nuevo. Los datos del establecimiento y equipo PIE se mantienen.">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+    <!--script cálculo de edad actual-->
+    <script>
+        document.getElementById('fecha_nac').addEventListener('change', function () {
+            const fechaNacimiento = new Date(this.value);
+            const fechaActual = new Date();
+
+            let años = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+            let meses = fechaActual.getMonth() - fechaNacimiento.getMonth();
+
+            if (meses < 0 || (meses === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+                años--;
+                meses += 12;
+            }
+
+            if (fechaActual.getDate() < fechaNacimiento.getDate()) {
+                meses--;
+            }
+
+            let resultado = años >= 1
+                ? `${años} años y ${meses} meses`
+                : `${meses} meses`;
+
+
+            document.getElementById('edad_est').value = resultado;
+        });
+    </script>
+
+
+    <fieldset>
+        <legend>SELECCIONA EL FORMULARIO A DESCARGAR</legend>
+        <div class="botones">
+            <div>
+                <input class="boton" id="fur-dea" value="FUR DEA">
+            </div>
+            <div>
+                <input class="boton" id="fur-audio" value="FUR D.Auditiva">
+            </div>
+            <div>
+                <input class="boton" id="fur-di" value="FUR D.I">
+            </div>
+            <div>
+                <input class="boton" id="fur-motor" value="FUR D.Motor">
+            </div>
+            <div>
+                <input class="boton" id="fur-multi" value="FUR D.Múltiple">
+            </div>
+            <div>
+                <input class="boton" id="fur-visual" value="FUR D.Visual">
+            </div>
+            <div>
+                <input class="boton" id="fur-fil" value="FUR FIL">
+            </div>
+            <div>
+                <input class="boton" id="fur-tdah" value="FUR TDAH">
+            </div>
+            <div>
+                <input class="boton" id="fur-tea" value="FUR TEA">
+            </div>
+            <div>
+                <input class="boton" id="fur-tel" value="FUR TEL">
+            </div>
+            <div>
+                <input class="boton" id="fu-salud" value="FU Salud">
+            </div>
+            <div>
+                <input class="boton" id="inf-familia" value="Inf. Familia">
+            </div>
+        </div>
+        <p class="txt-descargas"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 9h.01" />
+                <path d="M11 12h1v4h1" />
+            </svg> Revise su carpeta de "Descargas" para ver los formularios descargados.</p>
+    </fieldset>
+    <br>
+    <br>
+    <HR>
+    </HR>
+    <br>
+    <br>
+    <section id="confidencialidad">
+        <fieldset class="confi">
+            <div class="titulo_confi">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+                    <path
+                        d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" />
+                    <path d="M3 3l18 18" />
+                </svg>
+                <h2>Compromiso de privacidad de la información</h2>
+            </div>
+            <p>Toda información ingresada en este sitio será procesada únicamente durante el tiempo que se
+                requiera para la funcionalidad de la aplicación y no se almacenará en ningún momento y/o formato.
+                Esta medida garantiza la seguridad y privacidad de las Comunidades Educativas que utilicen esta
+                herramienta.
+                <br>
+                Quienes deseen revisar el código fuente de la aplicación para su análisis, está disponible a
+                solicitud. Por favor, contacte al autor para obtener acceso a esta información.
+            </p>
+        </fieldset>
+    </section>
+    <br>
+    <br>
+    <HR>
+    </HR>
+    <br>
+    <br>
+    <section id="autor">
+        <div class="autor">
+            <h2>Información sobre el autor</h2>
+            <div class="mi-nombre">
+                <p class="name">DANNY</p>
+                <p class="apellido">ArriagadaCampos</p>
+            </div>
+            <p class="txt-name">Educador Diferencial / Analista Programador</p>
+            <div class="icon-cont">
+                <a href="mailto:d.arriagadacampos@gmail.com" title="Contáctame al correo: d.arriagadacampos@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mail" width="32" height="32" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg></a>
+                <a href="https://www.linkedin.com/in/arriagada-campos/" target="_blank" rel="noopener noreferrer"
+                    title="Visita mi perfil de LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                        <path d="M8 11l0 5" />
+                        <path d="M8 8l0 .01" />
+                        <path d="M12 16l0 -5" />
+                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+        <p class="foot"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-like"
+                width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f31c95" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 16m0 1a1 1 0 0 1 1 -1h1a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1z" />
+                <path
+                    d="M6 20a1 1 0 0 0 1 1h3.756a1 1 0 0 0 .958 -.713l1.2 -3c.09 -.303 .133 -.63 -.056 -.884c-.188 -.254 -.542 -.403 -.858 -.403h-2v-2.467a1.1 1.1 0 0 0 -2.015 -.61l-1.985 3.077v4z" />
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M5 12.1v-7.1a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-2.3" />
+            </svg>PIExpress - <span id="year"></span></p>
+        <a href="#header"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-arrow-up"
+                width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 8l-4 4" />
+                <path d="M12 8v8" />
+                <path d="M16 12l-4 -4" />
+            </svg>
+        </a>
+    </footer>
+
+    <script>
+        // Obtener el año actual para el footer
+        const currentYear = new Date().getFullYear();
+        // Establecer el contenido del elemento con ID "year" al año actual
+        document.getElementById('year').textContent = currentYear;
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

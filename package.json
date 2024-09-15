@@ -1,0 +1,22 @@
+{
+  "name": "formularios_pie",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "docxtemplater": "^3.49.1",
+    "express": "^4.19.2",
+    "pizzip": "^3.1.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.93.0"
+  }
+}
