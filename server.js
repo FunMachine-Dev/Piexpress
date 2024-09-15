@@ -26,7 +26,7 @@ app.post('/generate-doc', (req, res) => { //aqui se pasan todos los campos de te
     // Selección de la plantilla basada en el tipo de documento solicitado. El tipo de doctype se pone en el fecht de script.js. ambos deben coincidir para que se aplique el if correspondiente al boton que aprieta el usuario
     //condiciones if que aplican dependiendo del boton que apriete el usuario
     if (docType === "dea") {
-        templatePath = path.join(__dirname, 'templates', 'fur_dea.docx');//aqui se pone el archivo de base en la carpeta templates
+        templatePath = path.join(__dirname, 'templates', 'FUR_DEA.docx');//aqui se pone el archivo de base en la carpeta templates
     } else if (docType === "audio") {
         templatePath = path.join(__dirname, 'templates', 'FUR_AUDIO.docx');
     } else if (docType === "di") {
