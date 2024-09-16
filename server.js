@@ -5,7 +5,7 @@ const PizZip = require('pizzip');
 const Docxtemplater = require('docxtemplater');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; //permite configurar el servidor para local y externos
 
 // Configurar la carpeta 'public' para servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
