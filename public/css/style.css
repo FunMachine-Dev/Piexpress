@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 13px !important;
     /*background-color: #50bfaf;*/
     background-image: linear-gradient(to top, #E9E9E9 0%, white 100%);
     height: 100;
@@ -26,15 +26,15 @@ body {
     flex-direction: column;*/
 }
 
+/*Icono logo, texto logo y menu*/
 .header_contenedor {
     display: flex;
     align-items: center;
-    margin-right: 1rem;
+    justify-content: center;
 }
 
 
 .menu {
-    
     font-family: var(--fuente_logo);
     text-decoration: none;
     text-align: center;
@@ -48,48 +48,40 @@ body {
     margin-top: 2rem;
 }
 
+/*MediaQery para menu y logo - para pantallas chicas*/
 @media (max-width: 768px) {
     .header_contenedor {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-  
-}
-
-@media (max-width: 768px) {
-    .titulo {
-        margin: 0%;
-    }
 
 }
 
-.titulo {
+.titulo_logo {
     font-family: var(--fuente_logo);
     font-size: 3rem;
+    margin-left: 0;
+    margin-top: .5rem;
 }
 
-.titulo span {
-    font-family: var(--fuente_texto);
-    font-weight: 300;
-    font-size: 1.5rem;
-    font-style: normal;
-    color: gray;
-    text-align: left;
-}
-
+/*Título secciones Bienvenida, Privacidad y Autor*/
 h2 {
     font-family: var(--fuente_logo);
     font-weight: 900;
     font-style: normal;
     text-align: center;
     color: black;
-
 }
 
+/*Título Instrucciones*/
 h3 {
     margin-left: 10rem;
-    color: b;
+    color: black;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
 }
 
 /*Estilo que aplica a las pantallas chicas*/
@@ -119,9 +111,11 @@ h3 {
     /* Espacio entre el texto y la imagen */
 }
 
+/*La mayoría de los textos*/
 p {
     font-family: var(--fuente_texto);
     font-weight: 100;
+    margin: 10px;
 }
 
 .txt-fu-salud {
@@ -131,6 +125,16 @@ p {
     font-style: oblique;
     font-size: x-small;
     margin-left: 10px;
+}
+
+/*Ajuste tamaño ícono "información" en pantallas chicas*/
+@media (max-width: 768px) {
+
+    .txt-fu-salud svg,
+    .txt-descargas svg {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .posdata {
@@ -149,12 +153,14 @@ p {
         align-items: center;
         color: whitesmoke;
     }
+
     .menu {
         margin-left: auto;
         font-family: var(--fuente_logo);
         text-decoration: none;
         text-align: center;
     }
+
     .instrucciones {
         display: flex;
         font-family: var(--fuente_logo);
@@ -164,6 +170,7 @@ p {
         margin-right: 3rem;
         text-align: justify;
     }
+
     .instrucciones p {
         margin-left: 40px;
     }
@@ -181,8 +188,6 @@ p {
     }
 }
 
-
-
 .bienvenida img {
     margin-left: 10px;
     width: 20rem;
@@ -196,18 +201,9 @@ p {
     align-items: center;
     margin-right: 3rem;
     text-align: justify;
+    padding: 20px;
 }
 
-p {
-    margin-left: 10px;
-}
-
-h3 {
-    font-weight: 800;
-    font-style: normal;
-    text-align: center;
-    margin: 0;
-}
 
 /*Estilo del contenedor de los formularios. Aplica a todos los formularios*/
 .formulario {
@@ -220,21 +216,24 @@ h3 {
     padding: 2rem;
 }
 
-
-
-
-/*"min" es estilo para pantallas grandes (de 768 para arriba*/
+/*"min" es estilo para pantallas grandes (de 768 para arriba
 @media (min-width:768px) {
-    .form-estudiante, .form-colegio, .form-PIE1, .form-PIE2 {
+    .form-estudiante,
+    .form-colegio,
+    .form-PIE1,
+    .form-PIE2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 1rem;
     }
+}*/
+
+.label-float {
+    margin-left: 1rem !important;
 }
 
 
-
-.form-PIE1 .campo:nth-child(1) {
+/*.form-PIE1 .campo:nth-child(1) {
     grid-column: 1/4;
 }
 
@@ -246,18 +245,19 @@ h3 {
 .form-PIE1 .campo:nth-child(6),
 .form-PIE1 .campo:nth-child(4) {
     grid-column: 3/5;
-}
+}*/
 
-/*OK campo "nombre colegio" ocupa todo el ancho (1 fila partida en 5*/
+/*OK campo "nombre colegio" ocupa todo el ancho (1 fila partida en 5
 .form-colegio .campo:nth-child(1) {
     grid-column: 1/5;
-}
-/*OK campo "nombre director" ocupa un poco menos de todo el ancho (1 fila partida en 4*/
+}*/
+
+/*OK campo "nombre director" ocupa un poco menos de todo el ancho (1 fila partida en 4
 .form-colegio .campo:nth-child(2) {
     grid-column: 1/4;
-}
+}*/
 
-.form-estudiante .campo:nth-child(3) {
+/*.form-estudiante .campo:nth-child(3) {
     grid-column: 1/3;
 }
 
@@ -266,7 +266,40 @@ h3 {
 }
 
 .form-estudiante .campo:nth-child(1) {
-    grid-column: 1/4;
+    grid-column: 1/4 !important;
+}*/
+
+
+/*Adapta tamaños campos nombre y curso*/
+.form-estudiante .col-sm:nth-child(1),
+.primera-fila .col-sm:nth-child(1) {
+    flex: 2;
+    /* Columna más grande */
+}
+
+.form-estudiante .col-sm:nth-child(2),
+.primera-fila .col-sm:nth-child(2) {
+    flex: 1;
+    /* Columna más pequeña */
+}
+
+@media (max-width: 768px) {
+    .form-colegio, .form-estudiante {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Adapta tamaño campos establecimiento y RBD*/
+.form-colegio .col-sm:nth-child(3) {
+    flex: 1;
+    /* Columna más grande */
+}
+
+.form-colegio .col-sm:nth-child(1),
+.form-colegio .col-sm:nth-child(2) {
+    flex: 2;
+    /* Columna más grande */
 }
 
 .campo {
@@ -294,8 +327,10 @@ label {
 
 /*para poder dar estilo específico a los campos de label floating con !important*/
 .form-control {
-    border-radius: 1rem!important;
-    
+    border-radius: 1rem !important;
+    font-size: larger !important;
+    height: 5rem !important;
+    margin-bottom: 1rem;
 }
 
 legend {
@@ -307,17 +342,17 @@ legend {
 fieldset {
     margin: 20px;
     border-radius: 0.5rem;
+    border: 2px solid #ccc !important;
+    padding: 20px !important;
 }
 
 .subtitulo-form {
     text-align: center;
     font-family: var(--fuente_logo);
-    margin-left: 1rem;
-}
-
-.subtitulo-form {
+    padding: 1rem;
     font-weight: 900;
 }
+
 
 .boton:hover {
     cursor: pointer;
@@ -337,12 +372,17 @@ fieldset {
     margin-top: 1rem;
 }
 
+/*fieldset de botones*/
 .botones {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
     justify-items: center;
     align-items: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100rem;
+    margin: 0 auto 0 auto;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 
@@ -374,62 +414,99 @@ fieldset {
     font-style: oblique;
     font-size: x-small;
     margin-left: 10px;
+    margin-top: 1rem;
 }
 
-
-.confi {
-
-    border-radius: 1rem;
-    margin: 2rem;
-    text-align: justify;
-    line-height: 1.5;
-}
-
+/*Títlo confidencialidad*/
 .titulo_confi {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
-.confi p,
-.confi h2 {
-    margin: 1rem;
-    padding: 2rem;
+/*Texto Confidencialidad*/
+.confidencialidad p {
+    text-align: justify !important;
+    padding: 1rem;
+}
+
+/*Ajuste del título "confidencialidad" para pantallas chicas*/
+@media (max-width: 768px) {
+    .titulo_confi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .titulo_confi h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .titulo_confi svg {
+        width: 32px;
+        height: 32px;
+    }
 
 }
 
+/*Sección autor*/
 .mi-nombre {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-image: linear-gradient(to right, var(--color_azul) 0%, rgb(71, 30, 252) 100%);
     border-radius: 1REM;
-    margin: .5rem;
 }
 
-.mi-nombre .name {
+.name {
     font-family: var(--fuente_logo);
     color: blue;
     font-size: 3rem;
+    margin: 1rem;
 
 }
 
-.mi-nombre .apellido {
+.apellido {
     font-family: var(--fuente_logo);
     color: var(--color_rosado);
     font-size: 3rem;
+    margin: 1rem;
+}
+
+/*Ajuste seccion Autor pantallas chicas*/
+@media (max-width: 768px) {
+
+    .name,
+    .apellido {
+        font-size: x-large;
+    }
 }
 
 .autor .txt-name {
     text-align: center;
+    margin: 0;
 }
 
-.icon-cont {
+.icon-contact {
     display: flex;
     justify-content: center;
-    /* Centra el icono horizontalmente dentro del contenedor */
-    margin-top: 10px;
-    /* Ajusta el espacio superior si es necesario */
+    align-items: center;
+}
+
+/*Ajuste de los íconos de contacto pantallas chicas*/
+@media (max-width: 768px) {
+    .icon-contact svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .txt-name {
+        margin: 0;
+    }
 }
 
 footer {
@@ -440,6 +517,13 @@ footer {
     font-family: var(--fuente_texto);
     color: gray;
     margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .foot svg {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .foot {

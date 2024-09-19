@@ -17,12 +17,14 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One&family=Foldit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Staatliches&family=Varela+Round&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
 </head>
 
 <body>
+    <!--Logo y menú-->
     <div class="header_contenedor" id="header">
         <a href="index.html">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-like" width="32"
@@ -36,7 +38,7 @@
                 <path d="M5 12.1v-7.1a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-2.3" />
             </svg>
         </a>
-        <h1 class="titulo">PIExpress</h1>
+        <h1 class="titulo_logo">PIExpress</h1>
 
         <div class="menu">
             <nav>
@@ -45,8 +47,9 @@
             </nav>
         </div>
     </div>
+    <!--Texto bienvenida-->
     <h2>¡Bienvenidos colegas!</h2>
-    <section class="bienvenida">
+    <div class="bienvenida">
         <div class="bienvenida__txt">
             <p>¿Te ha pasado que al hacer tus formularios PIE
                 tienes que repetir muchas veces los mismos datos? ¡Eso se acabó! Con esta herramienta,
@@ -61,8 +64,9 @@
             </p>
             <img class="img_bienvenida" src="fondo_documentos.jpg" alt="fondo documentos">
         </div>
-    </section>
+    </div>
 
+    <!--Texto instrucciones-->
     <div class="instrucciones">
         <h3>Instrucciones</h3>
         <p>1. Completa los datos de tu establecimiento y del equipo PIE.
@@ -79,190 +83,425 @@
         te invito a visitar la sección <a href="#confidencialidad">"Privacidad de la información".</a>
     </div>
 
+    <!--Formularios-->
     <main class="formulario">
         <!--Formulario colegio-->
-        <fieldset>
+        <section>
             <legend>DATOS ESTABLECIMIENTO Y EQUIPO</legend>
             <form>
-                <div class="form-colegio">
-                    <div class="campo">
+                <div class="row form-colegio">
+                    <div class="mt-3 form-floating col-sm">
+                        <input id="establecimiento" type="text" class="form-control"
+                            placeholder="Nombre del establecimiento" name="establecimiento">
+                        <label class="label-float" for="establecimiento">Nombre del establecimiento:</label>
+                    </div>
+                    <div class="mt-3 form-floating col-sm">
+                        <input id="nom_direc" type="text" class="form-control" placeholder="Nombre Director/a:"
+                            name="nom_direc">
+                        <label class="label-float" for="nom_direc">Nombre Director/a:</label>
+                    </div>
+                    <div class="mt-3 form-floating col-sm">
+                        <input id="rbd" type="text" class="form-control" placeholder="RBD" name="rbd">
+                        <label class="label-float" for="rbd">RBD:</label>
+                    </div>
+
+                    <!--<div class="campo">
                         <label>Nombre del establecimiento:</label>
                         <input class="input" type="text" id="establecimiento" name="establecimiento">
                     </div>
-                    <div class="campo">
+                <div class="campo">
                         <label>Nombre director/a:</label>
                         <input class="input" type="text" id="nom_direc" name="nom_direc">
                     </div>
-                    <div class="campo">
+                <div class="campo">
                         <label>RBD:</label>
                         <input class="input" type="text" id="rbd" name="rbd">
-                    </div>
+                    </div>-->
                 </div>
-                <hr>
-                <!--Formulario responsable-->
-                <p class="subtitulo-form">PROFESIONAL RESPONSABLE DEL PROCESO DE EVALUACIÓN INTEGRAL DEL
-                    ESTUDIANTE</p>
-                <div class="form-PIE1">
-                    <div class="campo">
-                        <label>Nombre del profesional:</label>
-                        <input class="input" type="text" id="nom_prof_resp" name="nom_prof_resp">
-                    </div>
-                    <div class="campo">
-                        <label>RUN:</label>
-                        <input class="input" type="text" id="run_prof_resp" name="run_prof_resp">
-                    </div>
-                    <div class="campo">
-                        <label>Profesión/especialidad:</label>
-                        <input class="input" type="text" id="prof_prof_resp" name="prof_prof_resp">
-                    </div>
-                    <div class="campo">
-                        <label>Cargo:</label>
-                        <input class="input" type="text" id="cargo_prof_resp" name="cargo_prof_resp">
-                    </div>
-                    <div class="campo">
-                        <label>Fono contacto:</label>
-                        <input class="input" type="text" id="fono_prof_resp" name="fono_prof_resp">
-                    </div>
-                    <div class="campo">
-                        <label>E-mail:</label>
-                        <input class="input" type="email" id="mail_prof_resp" name="mail_prof_resp">
-                    </div>
+        </section>
 
-                    <hr>
-                </div>
-                <!--Formulario equipo PIE-->
-                
-                    <p class="subtitulo-form">PROFESIONALES QUE HAN PARTICIPADO EN EL PROCESO DE ENTREGA DE APOYOS
-                    </p>
-                <!--Campo con label flotante-->
-                    <div class="form-PIE2">
-                    <div class="mt-3 form-floating">
-                        <input id="nom_prof_pie1" type="text" class="form-control" placeholder="Nombre"  name="nom_prof_pie1" >
-                        <label for="nom_prof_pie1">1.- Nombre:</label>
-                    </div>
-                    <div class="campo">
-                        <label>Profesión:</label>
-                        <input class="input" type="text" id="prof_prof_pie1" name="prof_prof_pie1">
-                    </div>
-                    <div class="campo">
-                        <label>Fono/E-mail:</label>
-                        <input class="input" type="text" id="contacto_prof_pie1" name="contacto_prof_pie1">
-                    </div>
-                    <div class="campo">
-                        <label>Registro profesional:</label>
-                        <input class="input" type="text" id="reg_prof_pie1" name="reg_prof_pie1">
-                    </div>
-                    <!--profesional 2-->
-                    <div class="campo">
-                        <input class="input" type="text" id="nom_prof_pie2" name="nom_prof_pie2">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="prof_prof_pie2" name="prof_prof_pie2">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="contacto_prof_pie2" name="contacto_prof_pie2">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="reg_prof_pie2" name="reg_prof_pie2">
-                    </div>
-                    <!--profesional 3-->
-                    <div class="campo">
-                        <input class="input" type="text" id="nom_prof_pie3" name="nom_prof_pie3">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="prof_prof_pie3" name="prof_prof_pie3">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="contacto_prof_pie3" name="contacto_prof_pie3">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="reg_prof_pie3" name="reg_prof_pie3">
-                    </div>
-                    <!--profesional 4-->
-                    <div class="campo">
-                        <input class="input" type="text" id="nom_prof_pie4" name="nom_prof_pie4">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="prof_prof_pie4" name="prof_prof_pie4">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="contacto_prof_pie4" name="contacto_prof_pie4">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="reg_prof_pie4" name="reg_prof_pie4">
-                    </div>
-                    <!--profesional 5-->
-                    <div class="campo">
-                        <input class="input" type="text" id="nom_prof_pie5" name="nom_prof_pie5">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="prof_prof_pie5" name="prof_prof_pie5">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="contacto_prof_pie5" name="contacto_prof_pie5">
-                    </div>
-                    <div class="campo">
-                        <input class="input" type="text" id="reg_prof_pie5" name="reg_prof_pie5">
-                    </div>
-                </div>
-            </form>
-        </fieldset>
         <hr>
+
+        <!--Formulario responsable-->
+        <section>
+            <p class="subtitulo-form">PROFESIONAL RESPONSABLE DEL PROCESO DE EVALUACIÓN INTEGRAL DEL
+                ESTUDIANTE
+            </p>
+            <div class="row form-PIE1 primera-fila">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_resp" type="text" class="form-control" placeholder="Nombre del profesional"
+                        name="nom_prof_resp">
+                    <label class="label-float" for="nom_prof_resp">Nombre del profesional:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="run_prof_resp" type="text" class="form-control" placeholder="RUN" name="run_prof_resp">
+                    <label class="label-float" for="run_prof_resp">RUN:</label>
+                </div>
+            </div>
+            <div class="row form-PIE1">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_resp" type="text" class="form-control" placeholder="Profesión:"
+                        name="prof_prof_resp">
+                    <label class="label-float" for="prof_prof_resp">Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="cargo_prof_resp" type="text" class="form-control" placeholder="Cargo:"
+                        name="cargo_prof_resp">
+                    <label class="label-float" for="cargo_prof_resp">Cargo:</label>
+                </div>
+            </div>
+            <div class="row form-PIE1">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="fono_prof_resp" type="text" class="form-control" placeholder="Fono contacto:"
+                        name="fono_prof_resp">
+                    <label class="label-float" for="fono_prof_resp">Fono contacto:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="mail_prof_resp" type="text" class="form-control" placeholder="E-mail:"
+                        name="mail_prof_resp">
+                    <label class="label-float" for="mail_prof_resp">E-mail:</label>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--Formulario equipo PIE-->
+        <section>
+            <p class="subtitulo-form">PROFESIONALES QUE HAN PARTICIPADO EN EL PROCESO DE ENTREGA DE APOYOS
+            </p>
+            <div class="row form-PIE2">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_pie1" type="text" class="form-control" placeholder="1. Nombre:"
+                        name="nom_prof_pie1">
+                    <label class="label-float" for="nom_prof_pie1">1. Nombre:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_pie1" type="text" class="form-control" placeholder="1. Profesión:"
+                        name="prof_prof_pie1">
+                    <label class="label-float" for="prof_prof_pie1">1. Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="contacto_prof_pie1" type="text" class="form-control" placeholder="1. Fono/E-mail:"
+                        name="contacto_prof_pie1">
+                    <label class="label-float" for="contacto_prof_pie1">1. Fono/E-mail:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="reg_prof_pie1" type="text" class="form-control" placeholder="1. Registro profesional:"
+                        name="reg_prof_pie1">
+                    <label class="label-float" for="reg_prof_pie1">1. Registro profesional:</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row form-PIE2">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_pie2" type="text" class="form-control" placeholder="2. Nombre:"
+                        name="nom_prof_pie2">
+                    <label class="label-float" for="nom_prof_pie2">2. Nombre:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_pie2" type="text" class="form-control" placeholder="2. Profesión:"
+                        name="prof_prof_pie2">
+                    <label class="label-float" for="prof_prof_pie2">2. Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="contacto_prof_pie2" type="text" class="form-control" placeholder="2. Fono/E-mail:"
+                        name="contacto_prof_pie2">
+                    <label class="label-float" for="contacto_prof_pie2">2. Fono/E-mail:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="reg_prof_pie2" type="text" class="form-control" placeholder="2. Registro profesional:"
+                        name="reg_prof_pie2">
+                    <label class="label-float" for="reg_prof_pie1">2. Registro profesional:</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row form-PIE2">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_pie3" type="text" class="form-control" placeholder="3. Nombre:"
+                        name="nom_prof_pie3">
+                    <label class="label-float" for="nom_prof_pie3">3. Nombre:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_pie3" type="text" class="form-control" placeholder="3. Profesión:"
+                        name="prof_prof_pie3">
+                    <label class="label-float" for="prof_prof_pie3">3. Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="contacto_prof_pie3" type="text" class="form-control" placeholder="3. Fono/E-mail:"
+                        name="contacto_prof_pie3">
+                    <label class="label-float" for="contacto_prof_pie3">3. Fono/E-mail:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="reg_prof_pie3" type="text" class="form-control" placeholder="3. Registro profesional:"
+                        name="reg_prof_pie3">
+                    <label class="label-float" for="reg_prof_pie3">3. Registro profesional:</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row form-PIE2">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_pie4" type="text" class="form-control" placeholder="4. Nombre:"
+                        name="nom_prof_pie4">
+                    <label class="label-float" for="nom_prof_pie4">4. Nombre:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_pie4" type="text" class="form-control" placeholder="4. Profesión:"
+                        name="prof_prof_pie4">
+                    <label class="label-float" for="prof_prof_pie4">4. Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="contacto_prof_pie4" type="text" class="form-control" placeholder="4. Fono/E-mail:"
+                        name="contacto_prof_pie4">
+                    <label class="label-float" for="contacto_prof_pie4">4. Fono/E-mail:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="reg_prof_pie4" type="text" class="form-control" placeholder="4. Registro profesional:"
+                        name="reg_prof_pie4">
+                    <label class="label-float" for="reg_prof_pie4">4. Registro profesional:</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row form-PIE2">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nom_prof_pie5" type="text" class="form-control" placeholder="5. Nombre:"
+                        name="nom_prof_pie5">
+                    <label class="label-float" for="nom_prof_pie5">5. Nombre:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="prof_prof_pie5" type="text" class="form-control" placeholder="5. Profesión:"
+                        name="prof_prof_pie5">
+                    <label class="label-float" for="prof_prof_pie5">5. Profesión:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="contacto_prof_pie5" type="text" class="form-control" placeholder="5. Fono/E-mail:"
+                        name="contacto_prof_pie5">
+                    <label class="label-float" for="contacto_prof_pie5">5. Fono/E-mail:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="reg_prof_pie5" type="text" class="form-control" placeholder="5. Registro profesional:"
+                        name="reg_prof_pie5">
+                    <label class="label-float" for="reg_prof_pie5">5. Registro profesional:</label>
+                </div>
+            </div>
+        </section>
+
+        <!--<div class="form-PIE1">
+                <div class="campo">
+                    <label>Nombre del profesional:</label>
+                    <input class="input" type="text" id="nom_prof_resp" name="nom_prof_resp">
+                </div>
+                <div class="campo">
+                    <label>RUN:</label>
+                    <input class="input" type="text" id="run_prof_resp" name="run_prof_resp">
+                </div>
+                <div class="campo">
+                    <label>Profesión/especialidad:</label>
+                    <input class="input" type="text" id="prof_prof_resp" name="prof_prof_resp">
+                </div>
+                <div class="campo">
+                    <label>Cargo:</label>
+                    <input class="input" type="text" id="cargo_prof_resp" name="cargo_prof_resp">
+                </div>
+                <div class="campo">
+                    <label>Fono contacto:</label>
+                    <input class="input" type="text" id="fono_prof_resp" name="fono_prof_resp">
+                </div>
+                <div class="campo">
+                    <label>E-mail:</label>
+                    <input class="input" type="email" id="mail_prof_resp" name="mail_prof_resp">
+                </div>
+            </div>-->
+        <!--<div class="form-PIE2">
+            <div class="campo">
+                    <label>Profesión:</label>
+                    <input class="input" type="text" id="prof_prof_pie1" name="prof_prof_pie1">
+                </div>
+                <div class="campo">
+                    <label>Fono/E-mail:</label>
+                    <input class="input" type="text" id="contacto_prof_pie1" name="contacto_prof_pie1">
+                </div>
+                <div class="campo">
+                    <label>Registro profesional:</label>
+                    <input class="input" type="text" id="reg_prof_pie1" name="reg_prof_pie1">
+                </div>
+            
+                profesional 2
+                <div class="campo">
+                    <input class="input" type="text" id="nom_prof_pie2" name="nom_prof_pie2">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="prof_prof_pie2" name="prof_prof_pie2">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="contacto_prof_pie2" name="contacto_prof_pie2">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="reg_prof_pie2" name="reg_prof_pie2">
+                </div>
+                profesional 3
+                <div class="campo">
+                    <input class="input" type="text" id="nom_prof_pie3" name="nom_prof_pie3">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="prof_prof_pie3" name="prof_prof_pie3">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="contacto_prof_pie3" name="contacto_prof_pie3">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="reg_prof_pie3" name="reg_prof_pie3">
+                </div>
+                profesional 4
+                <div class="campo">
+                    <input class="input" type="text" id="nom_prof_pie4" name="nom_prof_pie4">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="prof_prof_pie4" name="prof_prof_pie4">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="contacto_prof_pie4" name="contacto_prof_pie4">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="reg_prof_pie4" name="reg_prof_pie4">
+                </div>
+                profesional 5
+                <div class="campo">
+                    <input class="input" type="text" id="nom_prof_pie5" name="nom_prof_pie5">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="prof_prof_pie5" name="prof_prof_pie5">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="contacto_prof_pie5" name="contacto_prof_pie5">
+                </div>
+                <div class="campo">
+                    <input class="input" type="text" id="reg_prof_pie5" name="reg_prof_pie5">
+                </div>-->
+
+        <hr>
+
         <!--Formulario estudiante-->
-        <fieldset>
-            <legend>DATOS ESTUDIANTES</legend>
-            <form>
-                <div class="form-estudiante">
-                    <div class="campo">
-                        <label>Nombre del estudiante:</label>
-                        <input class="input" type="text" name="nombre_est" id="nombre_est">
-                    </div>
-                    <div class="campo">
-                        <label>Curso/nivel educativo:</label>
-                        <input class="input" type="text" name="curso_est" id="curso_est">
-                    </div>
-                    <div class="campo">
-                        <label>RUN:</label>
-                        <input class="input" type="text" name="run_est" id="run_est">
-                    </div>
-
-                    <div class="campo">
-                        <label>Fecha de nacimiento:</label>
-                        <input class="input" type="date" name="fecha_nac" id="fecha_nac">
-                    </div>
-                    <div class="campo">
-                        <label>Edad actual:</label>
-                        <input class="input" type="text" id="edad_est" name="edad_est" readonly>
-                    </div>
-                    <div class="campo">
-                        <label>*Nacionalidad:</label>
-                        <input class="input" type="text" id="nacio_est" name="nacio_est">
-                    </div>
-                    <div class="campo">
-                        <label>*Lengua de origen:</label>
-                        <input class="input" type="text" id="lge_orig_est" name="lge_orig_est">
-                    </div>
-                    <div class="campo">
-                        <label>*Lengua uso habitual:</label>
-                        <input class="input" type="text" id="lge_uso_est" name="lge_uso_est">
-                    </div>
-
+        <legend>DATOS ESTUDIANTE</legend>
+        <form>
+            <div class="row form-estudiante">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nombre_est" type="text" class="form-control" placeholder="Nombre:" name="nombre_est">
+                    <label class="label-float" for="nombre_est">Nombre:</label>
                 </div>
-                <p class="txt-fu-salud"><svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M12 9h.01" />
-                        <path d="M11 12h1v4h1" />
-                    </svg> *Solo para FU Valoración de salud</p>
-                <div>
-                    <input class="boton" type="button" id="borrar" value="Borrar datos"
-                        title="Borra los datos del estudiante para insertar uno nuevo. Los datos del establecimiento y equipo PIE se mantienen.">
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="curso_est" type="text" class="form-control" placeholder="Curso:" name="curso_est">
+                    <label class="label-float" for="curso_est">Curso:</label>
                 </div>
-            </form>
-        </fieldset>
+            </div>
+
+
+            <div class="row form-estudiante">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="run_est" type="text" class="form-control" placeholder="RUN:" name="run_est">
+                    <label class="label-float" for="run_est">RUN:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="fecha_nac" type="date" class="form-control" placeholder="Fecha de nacimiento:" name="fecha_nac">
+                    <label class="label-float" for="fecha_nac">Fecha de nacimiento:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="edad_est" type="text" class="form-control" placeholder="Edad actual:" name="edad_est" readonly>
+                    <label class="label-float" for="edad_est">Edad actual:</label>
+                </div>
+            </div>
+
+
+            <div class="row form-estudiante">
+                <div class="mt-3 form-floating col-sm">
+                    <input id="nacio_est" type="text" class="form-control" placeholder="Nacionalidad*:" name="nacio_est">
+                    <label class="label-float" for="nacio_est">Nacionalidad*:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="lge_orig_est" type="text" class="form-control" placeholder="Lengua de origen*:" name="lge_orig_est">
+                    <label class="label-float" for="lge_orig_est">Lengua de origen*:</label>
+                </div>
+
+                <div class="mt-3 form-floating col-sm">
+                    <input id="lge_uso_est" type="text" class="form-control" placeholder="Lengua uso habitual*:" name="lge_uso_est">
+                    <label class="label-float" for="lge_uso_est">Lengua uso habitual*:</label>
+                </div>
+            </div>
+        </form>
+        <!-- <div class="campo">
+                    <label>Nombre del estudiante:</label>
+                    <input class="input" type="text" name="nombre_est" id="nombre_est">
+                </div>
+                <div class="campo">
+                    <label>Curso/nivel educativo:</label>
+                    <input class="input" type="text" name="curso_est" id="curso_est">
+                </div>
+                <div class="campo">
+                    <label>RUN:</label>
+                    <input class="input" type="text" name="run_est" id="run_est">
+                </div>
+
+                <div class="campo">
+                    <label>Fecha de nacimiento:</label>
+                    <input class="input" type="date" name="fecha_nac" id="fecha_nac">
+                </div>
+                <div class="campo">
+                    <label>Edad actual:</label>
+                    <input class="input" type="text" id="edad_est" name="edad_est" readonly>
+                </div>
+                <div class="campo">
+                    <label>*Nacionalidad:</label>
+                    <input class="input" type="text" id="nacio_est" name="nacio_est">
+                </div>
+                <div class="campo">
+                    <label>*Lengua de origen:</label>
+                    <input class="input" type="text" id="lge_orig_est" name="lge_orig_est">
+                </div>
+                <div class="campo">
+                    <label>*Lengua uso habitual:</label>
+                    <input class="input" type="text" id="lge_uso_est" name="lge_uso_est">
+                </div> -->
+
+
+        <p class="txt-fu-salud"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle"
+                width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                <path d="M12 9h.01" />
+                <path d="M11 12h1v4h1" />
+            </svg> *Solo para FU Valoración de salud
+        </p>
+        <div>
+            <input class="boton" type="button" id="borrar" value="Borrar datos"
+                title="Borra los datos del estudiante para insertar uno nuevo. Los datos del establecimiento y equipo PIE se mantienen.">
+        </div>
+
+
     </main>
+
     <!--script cálculo de edad actual-->
     <script>
         document.getElementById('fecha_nac').addEventListener('change', function () {
@@ -290,7 +529,7 @@
         });
     </script>
 
-
+    <br>
     <fieldset>
         <legend>SELECCIONA EL FORMULARIO A DESCARGAR</legend>
         <div class="botones">
@@ -342,12 +581,11 @@
     </fieldset>
     <br>
     <br>
-    <HR>
-    </HR>
+
     <br>
     <br>
-    <section id="confidencialidad">
-        <fieldset class="confi">
+    <fieldset>
+        <section class="confidencialidad" id="confidencialidad">
             <div class="titulo_confi">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off" width="32"
                     height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
@@ -358,7 +596,7 @@
                         d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" />
                     <path d="M3 3l18 18" />
                 </svg>
-                <h2>Compromiso de privacidad de la información</h2>
+                <h2>Privacidad de la información</h2>
             </div>
             <p>Toda información ingresada en este sitio será procesada únicamente durante el tiempo que se
                 requiera para la funcionalidad de la aplicación y no se almacenará en ningún momento y/o formato.
@@ -368,47 +606,46 @@
                 Quienes deseen revisar el código fuente de la aplicación para su análisis, está disponible a
                 solicitud. Por favor, contacte al autor para obtener acceso a esta información.
             </p>
-        </fieldset>
-    </section>
+        </section>
+    </fieldset>
     <br>
     <br>
-    <HR>
-    </HR>
-    <br>
-    <br>
-    <section id="autor">
-        <div class="autor">
-            <h2>Información sobre el autor</h2>
-            <div class="mi-nombre">
-                <p class="name">DANNY</p>
-                <p class="apellido">ArriagadaCampos</p>
-            </div>
-            <p class="txt-name">Educador Diferencial / Analista Programador</p>
-            <div class="icon-cont">
-                <a href="mailto:d.arriagadacampos@gmail.com" title="Contáctame al correo: d.arriagadacampos@gmail.com">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mail" width="32" height="32" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                        <path d="M3 7l9 6l9 -6" />
-                    </svg></a>
-                <a href="https://www.linkedin.com/in/arriagada-campos/" target="_blank" rel="noopener noreferrer"
-                    title="Visita mi perfil de LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
-                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                        <path d="M8 11l0 5" />
-                        <path d="M8 8l0 .01" />
-                        <path d="M12 16l0 -5" />
-                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-                    </svg></a>
-            </div>
-        </div>
-    </section>
-    <footer>
 
+    <br>
+    <br>
+    <div class="autor" id="autor">
+        <h2>Información sobre el autor</h2>
+        <div class="mi-nombre">
+            <p class="name">DANNY</p>
+            <p class="apellido">ArriagadaCampos</p>
+        </div>
+        <p class="txt-name">Educador Diferencial / Analista Programador</p>
+        <div class="icon-contact">
+            <a href="mailto:d.arriagadacampos@gmail.com" title="Contáctame al correo: d.arriagadacampos@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mail" width="32" height="32" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                    <path d="M3 7l9 6l9 -6" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arriagada-campos/" target="_blank" rel="noopener noreferrer"
+                title="Visita mi perfil de LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="32"
+                    height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                    <path d="M8 11l0 5" />
+                    <path d="M8 8l0 .01" />
+                    <path d="M12 16l0 -5" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <footer>
         <p class="foot"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-like"
                 width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f31c95" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -418,7 +655,8 @@
                     d="M6 20a1 1 0 0 0 1 1h3.756a1 1 0 0 0 .958 -.713l1.2 -3c.09 -.303 .133 -.63 -.056 -.884c-.188 -.254 -.542 -.403 -.858 -.403h-2v-2.467a1.1 1.1 0 0 0 -2.015 -.61l-1.985 3.077v4z" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M5 12.1v-7.1a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-2.3" />
-            </svg>PIExpress - <span id="year"></span></p>
+            </svg>PIExpress - <span id="year"></span>
+        </p>
         <a href="#header"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-arrow-up"
                 width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -429,6 +667,7 @@
                 <path d="M16 12l-4 -4" />
             </svg>
         </a>
+
     </footer>
 
     <script>
@@ -438,7 +677,9 @@
         document.getElementById('year').textContent = currentYear;
     </script>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
