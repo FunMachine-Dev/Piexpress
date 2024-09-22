@@ -73,6 +73,16 @@ app.post('/generate-doc', (req, res) => { //aqui se pasan todos los campos de te
 
         const buf = doc.getZip().generate({ type: 'nodebuffer' });
 
+        //registro de descargas
+        const logEntry = `Archivo descargado: ${docType}.docx - Establecimiento: ${establecimiento} - Fecha: ${new Date().toISOString()}\n`;
+        fs.appendFile('descargas.txt', logEntry, (err) => {
+            console.log('Registrando descarga...');
+
+            if (err) {
+                console.error('Error al registrar la descarga:', err);
+            }
+        });
+
         // Configurar la respuesta para la descarga del archivo
         res.setHeader('Content-Disposition', `attachment; filename=${docType}-output.docx`);
         res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
