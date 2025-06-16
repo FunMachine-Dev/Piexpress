@@ -33,11 +33,22 @@ body {
     justify-content: center;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+
+
 
 .menu {
     font-family: var(--fuente_logo);
     text-decoration: none;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .menu nav a {
@@ -89,8 +100,9 @@ h3 {
     background-image: linear-gradient(to right, var(--color_azul) 0%, rgb(71, 30, 252) 100%);
     padding: 1.5rem;
     border-radius: 1rem;
+    border: 1;
     text-align: justify;
-    margin: .5rem;
+    margin: 2rem;
     color: whitesmoke;
 }
 
@@ -145,7 +157,7 @@ p {
     font-family: var(--fuente_texto);
 }
 
-/*estilo txt_bienvenida que aplica a las pantallas de mínimo 768px*/
+/*estilo txt_bienvenida que aplica a las pantallas de mínimo 768px (grandes)*/
 @media (min-width: 768px) {
     .bienvenida .bienvenida__txt {
         display: flex;
@@ -210,8 +222,8 @@ p {
     align-items: center;
     text-align: center;
     background-color: #c9c9c9;
-    max-width: 100rem;
-    margin: 0 auto 0 auto;
+    
+    margin: 2rem;
     border-radius: 1rem;
     padding: 2rem;
 }
@@ -460,6 +472,7 @@ fieldset {
     text-align: center;
     background-image: linear-gradient(to right, var(--color_azul) 0%, rgb(71, 30, 252) 100%);
     border-radius: 1REM;
+    margin: 2rem;
 }
 
 .name {
